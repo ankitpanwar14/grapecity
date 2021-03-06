@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace BlogApp.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PostsController : ControllerBase
@@ -26,6 +25,7 @@ namespace BlogApp.Controllers
         }
 
         // GET: api/Posts
+        [Authorize]
         [HttpGet]
         public IEnumerable<Post> GetPosts()
         {
@@ -33,6 +33,7 @@ namespace BlogApp.Controllers
         }
 
         // GET: api/Posts/5
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPost([FromRoute] int id)
         {
@@ -52,6 +53,7 @@ namespace BlogApp.Controllers
         }
 
         // PUT: api/Posts/5
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPost([FromRoute] int id, [FromBody] Post post)
         {
@@ -85,6 +87,7 @@ namespace BlogApp.Controllers
         }
 
         // POST: api/Posts
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> PostPost([FromBody] Post post)
         {
@@ -99,6 +102,7 @@ namespace BlogApp.Controllers
         }
 
         // DELETE: api/Posts/5
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePost([FromRoute] int id)
         {

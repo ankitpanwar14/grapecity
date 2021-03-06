@@ -49,7 +49,7 @@ namespace BlogApp
                     {
                         Name = " Ankit Panwar",
                         Email = "ankitpanwar14@gmail.com",
-                        Url=""
+                        Url= ""
                     }
                 });
             });

@@ -18,7 +18,7 @@ These APIs are built using following technologies/tools -
 1. .Net core 2.1
 2. EFcore 2.1
 3. WEB Api 2.0
-3. Swagger
+3. Swagger 2.1
 4. Postman
 5. SQLLite
 6. Basic Authentication

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlogApp.Model
 {
-    public class user
+    public class User
     {
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int userId { get; set; }

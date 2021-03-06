@@ -11,6 +11,6 @@ namespace BlogApp.Model
         public postDBContext(DbContextOptions<postDBContext> options) : base(options)        {        }
 
         public DbSet<Post> Posts { get; set; }
-        public DbSet<user> users { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

@@ -36,7 +36,7 @@ namespace BlogApp.Handlers
 
             try
             {
-                user user =  await Task.Run(() => getUser());
+                User user =  await Task.Run(() => getUser());
                 if (user == null)
                     AuthenticateResult.Fail("invalid credentials");
                 else
@@ -57,7 +57,7 @@ namespace BlogApp.Handlers
             return AuthenticateResult.Fail("");
         }
 
-        private user getUser()
+        private User getUser()
         {
             var authenticationHeaderValue = AuthenticationHeaderValue.Parse(Request.Headers["Authorization"]);
             var bytes = Convert.FromBase64String(authenticationHeaderValue.Parameter);
@@ -65,7 +65,7 @@ namespace BlogApp.Handlers
             String username = credentials[0];
             String password = credentials[1];
 
-            user user = _context.users.Where(u => u.userName == username && u.pwd == password).FirstOrDefault();
+            User user = _context.Users.Where(u => u.userName == username && u.pwd == password).FirstOrDefault();
 
             return user;
         }
